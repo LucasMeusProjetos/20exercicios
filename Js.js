@@ -1,9 +1,5 @@
 
 
-
-
-
-
 //1 - ano bissexto//
 let ano = 2024;
 
