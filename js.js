@@ -31,12 +31,23 @@ botao.addEventListener('click', verificar);
 
 // 2. Verifique se um número está entre 100 e 200.
 function entre100e200() {
-    let num = parseFloat(prompt("Digite um número:"));
+
+
+        const botao = document.getElementById('resultado2');
+        const inputAno = document.getElementById('numerocoletado'); 
+        const divAlerta = document.querySelector('.alert'); // Seleciona a div de alerta
+    
+        let num = parseInt(numerocoletado.value);
     if (num >= 100 && num <= 200) {
-        console.log("O número " + num + " ESTÁ entre 100 e 200.");
+        divAlerta.innerText = "O número " + num + " ESTÁ entre 100 e 200.";
     } else {
-        console.log("O número " + num + " NÃO está entre 100 e 200.");
+        divAlerta.innerText = "O número " + num + " NÃO está entre 100 e 200.";
+
+
     }
+
+    // 3. Ativa a função quando o botão for clicado
+botao.addEventListener('click', verificar2);
 }
 
 // 3. Leia a idade e verifique se pode votar.

@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página inicial</title>
+    <title>Verificando Número</title>
 </head>
 
-<p> exercicio 2 - Verificar se número está entre 100 e 200</p>
-<p> </p>
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<p>Exercício 2 - Verificar se número está entre 100 e 200</p>
 
 <body>
     
+    <div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">COLOQUE O NÚMERO </label>
+  <input type="number" class="form-control" id="numerocoletado" placeholder="Número">
+
+  <button type="button" id="resultado2" class="btn btn-primary btn-lg">Verificar</button>
+<!--botao criado para verificar se o ano Está entre 100 e 200, chamando a função verificar2() que está no arquivo js.js
+  -->
+</div>
+
+<script src="js.js"></script>  
+<!--div criada para mostrar o resultado do exercício 2, que é verificar se o número está entre 100 e 200.-->
+
+<div class="alert alert-primary" role="alert">
+  Aqui Saira o resultado
+</div>
+
+
 </body>
 </html>
