@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title>
 </head>
 
-<p> exercicio 3 - Verificar permissão de voto por idade</p>
-<p> </p>
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-
+    <p> exercicio 3 - Verificar permissão de voto por idade</p>
 <body>
-    
+    <div>
+    <!-- Corrigido: O 'for' agora é igual ao 'id' do input -->
+    <label for="idadecoletada" class="form-label">COLOQUE SUA IDADE </label>
+    <input type="number" class="form-control" id="idadecoletada" placeholder="Idade"> 
+
+
+    <button type="button" id="botaovotar" class="btn btn-primary btn-lg" onclick="votar()">Verificar Voto</button>
+    </div>
+
+    <!-- Adicionado um id="resultado" para você conseguir exibir o texto via JavaScript -->
+
+    <div id="resultado3" class="alert alert-primary" role="alert">
+        Aqui sairá o resultado
+    </div>  
+    <script src="js.js"></script>
 </body>
-</html>
+</html> 

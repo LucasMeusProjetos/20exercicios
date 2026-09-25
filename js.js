@@ -49,17 +49,22 @@ function entre100e200() {
 
 // 3. Leia a idade e verifique se pode votar.
 function votar() {
-    let idade = parseInt(prompt("Informe sua idade:"));
-    if (idade >= 16) {
-        if (idade >= 18 && idade <= 70) {
-            console.log("Voto OBRIGATÓRIO!");
+    const inputidade = document.getElementById('idadecoletada');
+    const divAlerta = document.querySelector('.alert');
+
+    let idade = parseInt(inputidade.value);
+
+    if (idade >= 18) {
+        if (idade <= 70) {
+            divAlerta.innerText = "Voto OBRIGATÓRIO!";
         } else {
-            console.log("Voto OPCIONAL!");
+            divAlerta.innerText = "Voto OPCIONAL!";
         }
     } else {
-        console.log("Você NÃO pode votar! Idade insuficiente.");
+        divAlerta.innerText = "Você NÃO pode votar! Idade insuficiente.";
     }
 }
+
 
 // 4. Verifique se um número está dentro de um intervalo.
 function intervalo() {
