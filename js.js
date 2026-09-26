@@ -68,18 +68,25 @@ function votar() {
 
 // 4. Verifique se um número está dentro de um intervalo.
 function intervalo() {
-    let limiteMin = parseFloat(prompt("Digite o COMEÇO do intervalo:"));
-    let limiteMax = parseFloat(prompt("Digite o FINAL do intervalo:"));
 
-    if (limiteMax < limiteMin) {
-        console.log("O final do intervalo não pode ser menor que o começo!");
+    const limiteMin = parseFloat(prompt("Digite o COMEÇO do intervalo:"));
+    const limiteMax = parseFloat(prompt("Digite o FINAL do intervalo:"));
+
+    let numeroaconferir = parseInt(
+        document.getElementById("numeroaverificar").value
+    );
+
+    const divAlerta = document.getElementById("resultado4");
+
+    if (numeroaconferir >= limiteMin && numeroaconferir <= limiteMax) {
+
+        divAlerta.innerText = numeroaconferir +
+            " está DENTRO do intervalo de " + limiteMin + " e " + limiteMax;
+
     } else {
-        let numero = parseFloat(prompt("Digite um número para testar:"));
-        if (numero >= limiteMin && numero <= limiteMax) {
-            console.log(numero + " está DENTRO do intervalo de " + limiteMin + " e " + limiteMax);
-        } else {
-            console.log(numero + " está FORA do intervalo de " + limiteMin + " e " + limiteMax);
-        }
+
+        divAlerta.innerText = numeroaconferir +
+            " está FORA do intervalo de " + limiteMin + " e " + limiteMax;
     }
 }
 

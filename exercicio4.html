@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title>
 </head>
 
-<p> Exercicio 4. Verificar se número está dentro de um intervalo</p>
-<p> </p>
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-
 <body>
-    
+
+    <p>Exercício 4. Verificar se número está dentro de um intervalo</p>
+
+    <div>
+        <label for="numeroaverificar">
+            COLOQUE O NÚMERO A SER CONFERIDO
+        </label>
+
+        <input
+            type="number"
+            id="numeroaverificar"
+            placeholder="Número a ser conferido">
+    </div>
+
+    <div>
+        <button
+            type="button"
+            id="botao4"
+            onclick="intervalo()">
+            Verificar Intervalo
+        </button>
+    </div>
+
+    <div id="resultado4" class="alert alert-primary" role="alert">
+        Aqui sairá o resultado
+    </div>
+
+    <script src="js.js"></script>
+
 </body>
 </html>
